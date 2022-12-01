@@ -1,0 +1,23 @@
+﻿<Window x:Class="BounceBall.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BounceBall"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="onLoad">
+    <Grid>
+        <Canvas x:Name="myCanvas" Margin="30,30,30,50" Grid.RowSpan="2" SizeChanged="myCanvas_SizeChanged">
+            <Ellipse Name ="myCircle" Width="50" Height="50" Fill="Red" 
+                     Canvas.Left="325" Canvas.Top="175"/>
+        </Canvas>
+        <Label x:Name="sizeLabel" Content="Resize the ball:"></Label>
+        <TextBox x:Name="sizeBox" HorizontalAlignment="Left" Margin="90,3,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="sizeBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,2,0,0" Content="Click" Click="sizeBtn_Click"/>
+
+        <Label x:Name="speedLabel" Content="Change Speed:" Margin="180,0,0,0"></Label>
+        <TextBox x:Name="speedBox" HorizontalAlignment="Left" Margin="274,3,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="speedBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="335,2,0,0" Content="Click" Click="speedBtn_Click"/>
+    </Grid>
+
+</Window>
